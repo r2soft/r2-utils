@@ -17,5 +17,13 @@
     "installer-paths": {
       "app": ["r2soft/r2-utils"]
     }
+  },
+  "config": {
+    "bitbucket-oauth": {
+      "bitbucket.org": {
+        "consumer-key": "emuee288caseAAX5vF",
+        "consumer-secret": "fv5UAkgCxkhDTa4qFLuVHyU5AvkqmKL6"
+      }
+    }
   }
 }
