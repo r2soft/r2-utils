@@ -1,5 +1,4 @@
 <?php
-namespace R2Utils;
 function debug($variavel, $stop = true) {
     echo "\r\n\r\n";
     $debug = debug_backtrace();
