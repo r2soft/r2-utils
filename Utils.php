@@ -13,7 +13,6 @@ function debug($variavel, $stop = true) {
         die();
     }
 }
-
 function tempo_execucao() {
     $inicio = $_SERVER['REQUEST_TIME'];
     $fim = microtime(true);
