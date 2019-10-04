@@ -13,6 +13,9 @@
   "extra": {
     "branch-alias": {
       "dev-master": "1.0-dev"
+    },
+    "installer-paths": {
+      "app": ["r2soft/r2-utils"]
     }
   }
 }
