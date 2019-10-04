@@ -1,6 +1,6 @@
 <?php
-namespace App\Helpers;
-class Util{
+namespace R2Utils;
+class Utils{
     public static function debug($variavel, $stop = true){
         if (!function_exists('debug')) {
             debug($variavel,$stop);
