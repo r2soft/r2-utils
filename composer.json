@@ -8,7 +8,7 @@
     }
   ],
   "autoload": {
-    "psr-0": { "R2Utils\\": "/" }
+    "psr-0": { "R2Utils\\": "/src" }
   },
   "extra": {
     "branch-alias": {
