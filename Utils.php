@@ -1,12 +1,5 @@
 <?php
 namespace R2Utils;
-class Utils{
-    public static function debug($variavel, $stop = true){
-        if (!function_exists('debug')) {
-            debug($variavel,$stop);
-        }
-    }
-}
 function debug($variavel, $stop = true) {
     echo "\r\n\r\n";
     $debug = debug_backtrace();
