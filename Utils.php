@@ -2,9 +2,6 @@
 function debug($variavel, $stop = true) {
     echo "\r\n\r\n";
     $debug = debug_backtrace();
-    echo "<pre>";
-    var_dump($debug);
-    exit;
     $trace = array_shift($debug);
     $file = $trace['file'];
     $line = $trace['line'];
