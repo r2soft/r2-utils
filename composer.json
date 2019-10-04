@@ -1,0 +1,16 @@
+{
+  "name": "r2soft/r2utils",
+  "description": "Utilitarios para desenvolvimento",
+  "authors": [
+    {
+      "name": "Ricardo de Paula Coelho",
+      "email": "r2soft@r2soft.com.br"
+    }
+  ],
+
+  "extra": {
+    "branch-alias": {
+      "dev-master": "1.0-dev"
+    }
+  }
+}
