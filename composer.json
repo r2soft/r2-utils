@@ -1,29 +1,27 @@
 {
-  "name": "r2soft/r2-utils",
-  "description": "Utilitarios para desenvolvimento",
-  "authors": [
+  "name": "r2soft/utils",
+  "description":"R2 Soft - Utilitarios para desenvolvimento",
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "repository",
+    "criteria"
+  ],
+  "authors":[
     {
-      "name": "Ricardo de Paula Coelho",
+      "name":"Ricardo de Paula Coelho",
+      "email": "ricardo@r2soft.com.br"
+    },
+    {
+      "name":"R2 Soft - Informática e Softwares Ltda-ME",
       "email": "r2soft@r2soft.com.br"
     }
   ],
+  "homepage": "https://www.r2soft.com.br/",
   "autoload": {
-    "psr-0": { "R2Utils\\": "/src" }
-  },
-  "extra": {
-    "branch-alias": {
-      "dev-master": "1.0-dev"
-    },
-    "installer-paths": {
-      "app": ["r2soft/r2-utils"]
-    }
-  },
-  "config": {
-    "bitbucket-oauth": {
-      "bitbucket.org": {
-        "consumer-key": "emuee288caseAAX5vF",
-        "consumer-secret": "fv5UAkgCxkhDTa4qFLuVHyU5AvkqmKL6"
-      }
+    "files": [ "src/Utils.php" ],
+    "psr-4": {
+      "R2Soft\\Utils\\": "src/"
     }
   }
 }
