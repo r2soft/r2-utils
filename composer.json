@@ -3,9 +3,7 @@
   "description":"R2 Soft - Utilitarios para desenvolvimento",
   "license": "MIT",
   "keywords": [
-    "laravel",
-    "repository",
-    "criteria"
+    "debug"
   ],
   "authors":[
     {
