@@ -16,12 +16,10 @@ if (!function_exists('debug')) {
         }
     }
 }
-if (!function_exists('debug')) {
-    function tempo_execucao()
-    {
-        $inicio = $_SERVER['REQUEST_TIME'];
-        $fim = microtime(true);
-        $total = $fim - $inicio;
-        return 'Tempo de Execução: ' . number_format($total, 5) . ' ms';
-    }
+function tempo_execucao()
+{
+    $inicio = $_SERVER['REQUEST_TIME'];
+    $fim = microtime(true);
+    $total = $fim - $inicio;
+    return 'Tempo de Execução: ' . number_format($total, 5) . ' ms';
 }
