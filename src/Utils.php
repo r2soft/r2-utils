@@ -9,7 +9,7 @@ if (!function_exists('debug')) {
         $line = $trace['line'];
         echo $lineInfo = sprintf('%s (line %s) -> %s', $file, $line, tempo_execucao());
 
-        echo "\r\n";
+        echo "\r\n<br><br>";
         print_r($variavel);
         if ($stop) {
             die();
