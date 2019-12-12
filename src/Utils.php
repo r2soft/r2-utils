@@ -1,4 +1,7 @@
 <?php
+
+use Symfony\Component\VarDumper\VarDumper;
+
 if (!function_exists('debug')) {
     function debug($variavel, $stop = true)
     {
@@ -9,8 +12,7 @@ if (!function_exists('debug')) {
         $line = $trace['line'];
         echo $lineInfo = sprintf('%s (line %s) -> %s', $file, $line, tempo_execucao());
 
-        echo "\r\n<br><br>";
-        print_r($variavel);
+        VarDumper::dump($variavel);
         if ($stop) {
             die();
         }

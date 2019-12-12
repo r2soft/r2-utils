@@ -22,5 +22,8 @@
     "psr-4": {
       "R2Soft\\Utils\\": "src/"
     }
+  },
+  "require-dev": {
+    "symfony/var-dumper": "^5.0"
   }
 }
