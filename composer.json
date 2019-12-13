@@ -23,7 +23,7 @@
       "R2Soft\\Utils\\": "src/"
     }
   },
-  "require-dev": {
+  "require": {
     "symfony/var-dumper": "^5.0"
   }
 }
