@@ -24,6 +24,6 @@
     }
   },
   "require": {
-    "symfony/var-dumper": "^5.0"
+    "symfony/var-dumper": "^v6.0.8"
   }
 }
