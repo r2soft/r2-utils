@@ -10,7 +10,7 @@ if (!function_exists('debug')) {
         $trace = array_shift($debug);
         $file = $trace['file'];
         $line = $trace['line'];
-        echo $lineInfo = sprintf('%s (line %s) -> %s ', $file, $line, "\r\n".tempo_execucao());
+        echo $lineInfo = sprintf('%s (line %s) -> %s '."\r\n", $file, $line, tempo_execucao());
 
         VarDumper::dump($variavel);
         if ($stop) {
