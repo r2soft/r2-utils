@@ -18,6 +18,18 @@ if (!function_exists('debug')) {
         }
     }
 }
+if (!function_exists('debug_pre')) {
+    function debug_pre($variavel, $stop = true)
+    {
+        echo "<pre>";
+        var_dump($variavel);
+        echo "<pre>";
+
+        if ($stop) {
+            die();
+        }
+    }
+}
 function tempo_execucao()
 {
     $inicio = $_SERVER['REQUEST_TIME'];
