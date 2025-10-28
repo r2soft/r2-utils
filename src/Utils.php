@@ -1,6 +1,46 @@
 <?php
 declare(strict_types=1);
 
+use Symfony\Component\VarDumper\VarDumper;
+
+if (!function_exists('debug')) {
+    function debug($variavel, $stop = true)
+    {
+        echo "\r\n\r\n";
+        $debug = debug_backtrace();
+        $trace = array_shift($debug);
+        $file = $trace['file'];
+        $line = $trace['line'];
+        echo $lineInfo = sprintf('%s (line %s) -> %s', $file, $line, tempo_execucao());
+
+        VarDumper::dump($variavel);
+        if ($stop) {
+            die();
+        }
+    }
+}
+
+if (!function_exists('debug_pre')) {
+    function debug_pre($variavel, $stop = true)
+    {
+        echo '<pre>';
+        var_dump($variavel);
+        echo '<pre>';
+
+        if ($stop) {
+            die();
+        }
+    }
+}
+
+function tempo_execucao()
+{
+    $inicio = $_SERVER['REQUEST_TIME'];
+    $fim = microtime(true);
+    $total = $fim - $inicio;
+    return 'Tempo de Execução: ' . number_format($total, 5) . ' ms';
+}
+
 /**
  * Debug moderno (à prova de OOM):
  * - Header com label, arquivo:linha (EXATA do callsite), tempo e memória
@@ -13,8 +53,8 @@ declare(strict_types=1);
  *   R2DBG_MAX_DEPTH, R2DBG_MAX_ITEMS, R2DBG_MAX_STRING, R2DBG_MAX_CLIP_BYTES
  */
 
-if (!function_exists('debug')) {
-    function debug(mixed $variavel, bool $stop = true, ?string $label = ''): void
+if (!function_exists('ddd')) {
+    function ddd(mixed $variavel, bool $stop = true, ?string $label = ''): void
     {
         $isCli = (PHP_SAPI === 'cli');
         $cfg   = r2dbg_cfg();
@@ -178,20 +218,6 @@ if (!function_exists('r2dbg_export_php_limited')) {
         }
 
         return $code;
-    }
-}
-
-
-/**
- * Versão "bruta" reaproveitando a UI (var_dump capturado)
- */
-if (!function_exists('debug_pre')) {
-    function debug_pre(mixed $variavel, bool $stop = true, ?string $label = 'var_dump'): void
-    {
-        ob_start();
-        var_dump($variavel);
-        $raw = ob_get_clean() ?: '';
-        debug($raw, $stop, $label);
     }
 }
 
