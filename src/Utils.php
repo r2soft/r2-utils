@@ -298,7 +298,7 @@ if (!function_exists('r2dbg_limit_value')) {
     /**
      * Reduz estruturas: limita profundidade, itens e string size. Evita recursão.
      */
-    function r2dbg_limit_value(mixed $v, int $depth, int $maxItems, int $maxString, \SplObjectStorage $seen = null)
+    function r2dbg_limit_value(mixed $v, int $depth, int $maxItems, int $maxString, ?\SplObjectStorage $seen = null)
     {
         if ($depth <= 0) {
             if (is_object($v)) return sprintf('object(%s){…}', get_class($v));
